@@ -1,0 +1,22 @@
+= Delegate Singleton
+
+Kotlin supports `singleton` classes by just replacing `class` with `singleton`. +
+Ref: https://kotlinlang.org/docs/reference/object-declarations.html
+
+You can then use this `object` in Kotlin as if they were static class in Java. +
+When accessed from Java, you have to get `INSTANCE` property to access the singleton object.
+
+Kotlin `object` is class with hidden constructor (needed obviously for Singleton design pattern).
+
+But, there are instances when some library needs `public no-args constructor`. +
+I encountered such a requirement when I had to using this singleton as `ServiceProvider`.
+Ref: https://docs.oracle.com/javase/tutorial/ext/basics/spi.html
+
+To solve this, I created a simple class, which delegates to a singleton in backend. +
+You may create multiple instances of this simple class, +
+but the requests will be served by the same singleton object.
+
+In main method, I am trying to use both - simple class and the singleton object as service provider.
+
+You can see that using singleton object fails with exception.
+

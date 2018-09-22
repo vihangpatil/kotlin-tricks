@@ -1,0 +1,6 @@
+= Multiple Inheritance (effect) in Kotlin
+
+Languages like Ruby had supported "multiple-inheritance" like behavior using Mixin. +
+Same can be done in Java, but it leads to a very verbose code. Check the code at the end of file. +
+But, in Kotlin same can be achieved by compact code using Kotlin's delegate feature. +
+Ref: https://kotlinlang.org/docs/reference/delegation.html
