@@ -5,6 +5,7 @@ import org.apache.beam.sdk.coders.TextualIntegerCoder
 import org.apache.beam.sdk.testing.PAssert
 import org.apache.beam.sdk.testing.TestPipeline
 import org.apache.beam.sdk.testing.TestStream
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 
@@ -15,6 +16,7 @@ class DSLTest {
     val pipeline = TestPipeline.create()
 
     @Test
+    @Ignore("Works only on JVM 8")
     fun testDSL() {
 
         val testStream: TestStream<String> =

@@ -12,19 +12,19 @@ import io.github.vihangpatil.kotlintricks.interfacemesh.providers.Provider2
 //
 
 interface A1 {
-    fun methodA1()
+    fun methodA1(): String
 }
 
 interface A2 {
-    fun methodA2()
+    fun methodA2(): String
 }
 
 interface B1 {
-    fun methodB1()
+    fun methodB1(): String
 }
 
 interface B2 {
-    fun methodB2()
+    fun methodB2(): String
 }
 
 //
