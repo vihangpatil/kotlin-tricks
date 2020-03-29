@@ -1,0 +1,23 @@
+# Interface Mesh
+
+## Objective
+`Interface` is used to decouple provider / implementation from its consumer / use.
+But if you have **multiple providers and consumers** such that the `methods exposed to a consumer are provided by multiple 
+providers`, and similarly `methods from a single provider are consumed by multiple consumers`, this can be achieved using 
+an **Interface Mesh**.
+
+## Use cases
+
+### Access Control
+If you want to control the methods to be exposed for a user with simple role compared to admin user, but the provider 
+implements all the methods. Interface for simple user will have different methods that interface for admin user.
+
+### Mutiple Data Sources
+If you want to use multiple data sources for persistence but have a unified API at consumption side.
+
+## Design
+ * There will be a set of `Consumer facing interfaces` and a set of `Provider facing interfaces`.
+ * All the methods in Consumer interfaces will be _wired_ towards the Provider interfaces.
+ * The Providers and Consumers will only see clean API / Interfaces and are decoupled from each other.
+ * The Interface Mesh and wiring of the methods is also hidden from Providers and Consumers.
+

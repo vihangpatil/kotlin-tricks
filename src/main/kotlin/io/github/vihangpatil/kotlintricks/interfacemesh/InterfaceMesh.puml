@@ -1,0 +1,24 @@
+@startuml
+
+() ConsumerA
+
+() ConsumerB
+
+ConsumeA ..> ConsumerA : <implements>
+
+ConsumeB ..> ConsumerB : <implements>
+
+() Provider1
+
+() Provider2
+
+ConsumerA -- Provider1 : A1
+ConsumerA -- Provider2 : A2
+
+ConsumerB -- Provider1 : B1
+ConsumerB -- Provider2 : B2
+
+Provider1 <.. Provide1 : <implements>
+Provider2 <.. Provide2 : <implements>
+
+@enduml
