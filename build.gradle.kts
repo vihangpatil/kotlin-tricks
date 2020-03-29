@@ -18,8 +18,17 @@ dependencies {
   implementation("org.slf4j:slf4j-api:1.7.25")
   implementation("org.slf4j:slf4j-simple:1.7.25")
 
+  // Apache Beam
   implementation("com.google.cloud.dataflow:google-cloud-dataflow-java-sdk-all:2.5.0")
 
+  // KTS Engine
+  implementation(kotlin("script-util"))
+  implementation(kotlin("script-runtime"))
+  implementation(kotlin("compiler-embeddable"))
+  implementation(kotlin("scripting-compiler-embeddable"))
+  implementation("net.java.dev.jna:jna:5.5.0")
+  // implementation(kotlin("compiler"))
+  // implementation(kotlin("scripting-compiler"))
   testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.2.70")
 }
 
