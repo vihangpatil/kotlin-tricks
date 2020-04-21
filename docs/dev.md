@@ -9,6 +9,6 @@
 ## Checking for dependency resolution
 
 ```bash
-./gradlew :prime:dependencyInsight --configuration runtimeClasspath --dependency dependency-name
+./gradlew dependencyInsight --configuration runtimeClasspath --dependency dependency-name
 ```
 
